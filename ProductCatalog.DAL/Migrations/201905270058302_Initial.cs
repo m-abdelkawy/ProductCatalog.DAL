@@ -15,7 +15,7 @@ namespace ProductCatalog.DAL.Migrations
                         Name = c.String(nullable: false),
                         Photo = c.Binary(),
                         Price = c.Double(nullable: false),
-                        LastUpdated = c.DateTime(nullable: false),
+                        LastUpdated = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id);
             

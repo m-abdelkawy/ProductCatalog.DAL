@@ -7,13 +7,13 @@ namespace ProductCatalog.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Initial : IMigrationMetadata
+    public sealed partial class PhotoToString : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PhotoToString));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905171259135_Initial"; }
+            get { return "201905270153187_PhotoToString"; }
         }
         
         string IMigrationMetadata.Source

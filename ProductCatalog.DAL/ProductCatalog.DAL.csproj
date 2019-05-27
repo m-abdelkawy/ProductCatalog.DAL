@@ -51,17 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Migrations\201905171259135_Initial.cs" />
-    <Compile Include="Migrations\201905171259135_Initial.Designer.cs">
-      <DependentUpon>201905171259135_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201905270058302_Initial.cs" />
+    <Compile Include="Migrations\201905270058302_Initial.Designer.cs">
+      <DependentUpon>201905270058302_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905171459176_Initial1.cs" />
-    <Compile Include="Migrations\201905171459176_Initial1.Designer.cs">
-      <DependentUpon>201905171459176_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905192346324_PhotoSetToString.cs" />
-    <Compile Include="Migrations\201905192346324_PhotoSetToString.Designer.cs">
-      <DependentUpon>201905192346324_PhotoSetToString.cs</DependentUpon>
+    <Compile Include="Migrations\201905270153187_PhotoToString.cs" />
+    <Compile Include="Migrations\201905270153187_PhotoToString.Designer.cs">
+      <DependentUpon>201905270153187_PhotoToString.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
@@ -69,19 +65,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905171259135_Initial.resx">
-      <DependentUpon>201905171259135_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905171459176_Initial1.resx">
-      <DependentUpon>201905171459176_Initial1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905192346324_PhotoSetToString.resx">
-      <DependentUpon>201905192346324_PhotoSetToString.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905270058302_Initial.resx">
+      <DependentUpon>201905270058302_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905270153187_PhotoToString.resx">
+      <DependentUpon>201905270153187_PhotoToString.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

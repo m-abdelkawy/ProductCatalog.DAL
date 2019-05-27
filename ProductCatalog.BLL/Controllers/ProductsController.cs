@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
@@ -15,7 +17,7 @@ using ProductCatalog.Infrastructure.Infrastructure;
 
 namespace ProductCatalog.BLL.Controllers
 {
-    //[EnableCors(origins: "*", headers:"*", methods:"*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProductsController : ApiController
     {
         private UnitOfWork uow = new UnitOfWork();
@@ -43,6 +45,7 @@ namespace ProductCatalog.BLL.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutProduct(int id, Product product)
         {
+            product.LastUpdated = DateTime.Now;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -78,6 +81,18 @@ namespace ProductCatalog.BLL.Controllers
         [ResponseType(typeof(Product))]
         public IHttpActionResult PostProduct(Product product)
         {
+            product.LastUpdated = DateTime.Now;
+            #region Photo
+            //var httpRequest = HttpContext.Current.Request;
+
+            //var postedFile = httpRequest.Files["photo"];
+            //string photoName = new string(Path.GetFileNameWithoutExtension(postedFile.FileName).Take(10).ToArray()).Replace(" ", "-");
+            //var filePath = HttpContext.Current.Server.MapPath("~/Photos/" + photoName);
+            //postedFile.SaveAs(filePath);
+
+            //product.Photo = filePath;
+            #endregion
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
